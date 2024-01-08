@@ -29,13 +29,25 @@ const content = [
 
 export default function App() {
   const [activeContentIndex, setActiveContentIndex] = useState(0);
+  const titles = [
+    "React js",
+    "React Native",
+    "typescript",
+    "javascript",
+    "tailwindcss & bootstrap",
+    "java & springboot",
+  ];
+
+  const generateRandomInt = (max) => {
+    return Math.floor(Math.random() * (max + 1));
+  };
 
   return (
     <div>
       <header>
         <img src="react-logo-xs.png" alt="React logo" />
         <div>
-          <h1>React.js</h1>
+          <h2>{titles[generateRandomInt(titles.length - 1)]}</h2>
           <p>i.e., using the React library for rendering the UI</p>
         </div>
       </header>
