@@ -1,10 +1,10 @@
-const Component1 = (props) => {
+const Component1 = ({ images, alt, title, description }) => {
   return (
     <div>
       <li>
-        <img src={props.images} alt={props.alt} style={{ width: "110px" }} />
-        <h4>{props.title}</h4>
-        <p>{props.description}</p>
+        <img src={images} alt={alt} style={{ width: "110px" }} />
+        <h4>{title}</h4>
+        <p>{description}</p>
       </li>
     </div>
   );
